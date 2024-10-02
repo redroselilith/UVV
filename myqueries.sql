@@ -42,3 +42,15 @@ select e.fname, e.lname, per_dept.posse, e.dept_id
 from employee e, per_dept
 where e.start_date = per_dept.posse
 and e.dept_id = per_dept.dept_id;
+
+select concat(fname, ' ', lname) name
+from individual
+union
+select name
+from business;
+
+select emp_id
+from employee
+where emp_id not in (select superior_emp_id
+					 from employee
+					 where superior_emp_id is not null);

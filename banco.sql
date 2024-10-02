@@ -1,5 +1,4 @@
 /* begin table creation */
-drop schema bank;
 create schema bank;
 use bank;
 
